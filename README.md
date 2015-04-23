@@ -7,6 +7,6 @@ So the issue with using the Parquet Group class is when your schema is very larg
 
 As you know, you can't use the Group class as an intermediate value between Mapper and Reducer, either, because it's not serializable.  Thus, you'll need to use a different object model that is more efficient.
 
-Enter Avro.  Avro and Parquet play very nicely together and is the preferred object model when dealing with Avro.  Just to clarify, we are talking about the in-memory object model here.  Parquet's "default example" is the Group, but you can also use Thrift, Google Protocol Buffers, Hive, or Pig.  But the storage format, on disk, is still Parquet.  You still get the benefits of the columnar data format and compression.
+Enter Avro.  Avro and Parquet play very nicely together and is the preferred object model when dealing with Parquet.  Just to clarify, we are talking about the in-memory object model here.  Parquet's "default example" is the Group, but you can also use Thrift, Google Protocol Buffers, Hive, or Pig.  But the storage format, on disk, is still Parquet.  You still get the benefits of the columnar data format and compression.
 
 On top of it, you can get all of the benefits of an Avro object model.  You can even get compile-time support for your object model by generating code from the Avro schema.
